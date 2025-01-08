@@ -1,0 +1,285 @@
+/* Watery animated gradient background */
+.fullbg{
+    background: linear-gradient(135deg, gold,gold);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    
+}
+
+.ptbackground {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a2a6c, #2575fc, #6dd5ed);
+    background-size: cover;
+    margin: 0em 7.5em;
+    animation: gradientShift 8s ease infinite;
+    overflow: hidden;
+    color: white;
+    padding-top: 70px; /* To account for fixed navbar */
+  }
+  
+  /* Gradient animation */
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .custom-navbar .nav-link {
+    color: #2f2f2f; /* Default color */
+    /* font-weight: bold; */
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+  }
+  .custom-navbar .nav-link.active {
+    color: #2f2f2f; /* Ensure active link color remains consistent */
+  }  
+  .custom-navbar .nav-link:hover {
+    color: gold; /* Hover color */
+  }
+  
+/* Rocket Styling */
+.rocket-container {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 2s ease-in-out;
+}
+
+.rocket-container.launch {
+  transform: translateY(-150vh); /* Moves the rocket off the screen */
+}
+
+.rocket-image {
+  width: 50px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.rocket-container:hover .rocket-image {
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+
+  /* Section styling */
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  .about-paragraph {
+    margin-left: 30px; /* Set the left margin for the entire paragraph */
+    font-size: 1.5rem; /* Make the font size large */
+    color: #f0f0f0;
+    text-align: justify; /* Justify text for a clean, consistent look */
+    text-indent: 30px; /* Indent the first line of each paragraph for neatness */
+  }
+  
+  .about-paragraph p {
+    margin-bottom: 1rem; /* Add some space between each paragraph */
+  }
+  
+ 
+  
+  /* Responsive adjustments for navbar */
+ /* Navbar brand with bluish color */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00bfff; /* Light blue */
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-brand:hover {
+    color: #007bff; /* Slightly darker blue on hover */
+  }
+  
+  
+  .nav-link {
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+  
+  /* Updated button styling with bluish gradient */
+  .btn-danger {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+  }
+  
+  .btn-danger:hover {
+    transform: scale(1.05);
+  }
+
+  /* App.css or relevant stylesheet */
+
+  .work-together-btn {
+    background-color: #007BFF;    /* Blue background */
+    color: white;                 /* White text color */
+    padding: 15px 30px;           /* Increase padding for a larger button */
+    border: none;                 /* No border */
+    border-radius: 5px;           /* Rounded corners */
+    cursor: pointer;             /* Pointer cursor on hover */
+    font-size: 24px;              /* Large font size */
+    font-weight: bold;            /* Bold text */
+    text-align: center;           /* Center text */
+  }
+
+  .work-together-btn:hover {
+    background-color: #007BFF;
+    color: #fff;
+    transform: scale(1.1); /* Button grows slightly on hover */
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5); /* Adds a glowing shadow effect */
+  }
+  
+  .work-together-btn:active {
+    transform: scale(0.95); /* Slight shrinking effect when the button is clicked */
+    box-shadow: 0 0 25px rgba(52, 152, 219, 0.8); /* Stronger shadow on click */
+  }
+  
+  .hand-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .hand {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .left-hand {
+    margin-right: 10px; /* Spacing between hands */
+  }
+  
+  .right-hand {
+    margin-left: 10px;
+  }
+  
+  .joined {
+    transform: translateX(-50px); /* Moves the hands together */
+  }
+  
+  .text {
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+  }
+  
+  .hand-button:hover .text {
+    opacity: 1;
+  }
+  
+
+/* Footer Styling */
+/* footer {
+    background-color: #FEBE10;  
+    margin: 5em -10em;
+    padding: 4em 45em;
+    width: 100%;
+  }
+  
+  footer h5 {
+    color: #2f2f2f;
+    margin-top: -3em; 
+  }
+  
+  footer p {
+    color: #2f2f2f;
+  }
+  
+  footer .social-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  footer .social-icons a {
+    font-size: 2rem;
+    color: #2f2f2f;
+    margin: 0 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  footer .social-icons a:hover {
+    transform: scale(1.1);  
+  }
+  
+  footer .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+  }
+  
+  footer .col-md-6 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  footer .text-right {
+    text-align: right;  
+  } */
+  
+  /* footerlatest */
+  footer {
+    background-color: #FEBE10;  /* Goldish yellow */
+    padding: 50px 0;
+    width: 100%;
+  }
+  
+  footer h5 {
+    color: #2f2f2f;
+    margin-top: 0; /* Adjust top margin to avoid displacement */
+  }
+  
+  footer p {
+    color: #2f2f2f;
+  }
+  
+  footer .social-icons {
+    display: flex;
+    justify-content: flex-end;  /* Align icons to the right */
+    align-items: center;
+  }
+  
+
+  
+  footer .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* Space items between left and right */
+  }
+  
+  footer .col-md-6 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  footer .text-right {
+    text-align: right;  /* Right-align icons */
+  }
+  
+  @media (max-width: 768px) {
+  }
+  

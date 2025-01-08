@@ -1,0 +1,175 @@
+/* Apply background gradient and structure */
+.fullbg{
+  background: linear-gradient(135deg, gold,gold);
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  
+}
+.cbackground {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a2a6c, #2575fc, #6dd5ed);
+    background-size: cover;
+    animation: gradientShift 8s ease infinite;
+    overflow: hidden;
+    color: white;
+    margin: 0 30.5em;
+    padding-top: 70px; /* To account for fixed navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Content structure for Contact */
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background for text */
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    animation: slideIn 1s ease-out;
+  }
+  
+  /* Image styles */
+  .contact-image {
+    margin-bottom: 30px;
+  }
+  
+  .contact-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: fadeIn 1s ease;
+  }
+  
+  /* Contact details text */
+  .contact-details h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f39c12; /* Yellowish color for title */
+  }
+  
+  .contact-details p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #fff;
+  }
+  
+  /* List styling */
+  .contact-details ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    width: 100%;
+  }
+  
+  /* Each contact item */
+  .contact-details li {
+    font-size: 1.1rem;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text with icon */
+    color: #fff; /* Default white color for text */
+    width: 100%;
+  }
+  
+  /* Each contact item's span for text */
+  .contact-details li span {
+    margin-left: 15px;
+    font-size: 1.2rem;
+  }
+  
+  /* Address Text Styling */
+  .address-text {
+    margin-left: 15px;  /* Align with other contact details */
+    font-size: 1.1rem;  /* Slightly smaller for better alignment */
+    line-height: 1.5;   /* Adjust line spacing for clarity */
+  }
+  
+  /* Links styling */
+  .contact-details li a {
+    color: #f39c12;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-details li a:hover {
+    color: #fff; /* Hover effect for email links */
+  }
+  
+  /* Icon styling */
+  .contact-icon {
+    margin-right: 15px;
+    width: 30px; /* Adjust the width of the images */
+    height: 30px; /* Adjust the height of the images */
+    object-fit: cover;
+  }
+
+  .back-button {
+    position: absolute;
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    background-color: transparent;
+    border: none;
+    color: #f39c12;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    color: gold;
+  }
+  
+  .back-button svg {
+    margin-right: 10px;
+    font-size: 1.8rem;
+  }
+  
+  /* Animation for background gradient */
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Animation for content */
+  @keyframes slideIn {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Animation for image */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
