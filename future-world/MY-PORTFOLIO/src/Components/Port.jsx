@@ -42,22 +42,51 @@ function Port() {
       setPdfVisible(false);
     };
 
-  const handleRocketClick = () => {
-    setRocketAnimation(true);
+    const handleRocketClick = () => {
+      const currentScroll = window.scrollY; // Get current scroll position
+      const pageHeight = document.documentElement.scrollHeight; // Get total page height
+      const viewportHeight = window.innerHeight; // Get viewport height
+      const isAtBottom = currentScroll + viewportHeight >= pageHeight - 1; // Check if at bottom
+    
+      setRocketAnimation(true);
+    
+      if (isAtBottom) {
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        // Scroll to bottom
+        window.scrollTo({ top: pageHeight, behavior: 'smooth' });
+      }
+    
+      // Reset animation after it's done
+      setTimeout(() => {
+        setRocketAnimation(false);
+      }, 2000); // Adjust this time to match your animation duration
+    };
+    
+    const [showPopup, setShowPopup] = useState(true); // State to control the pop-up
 
-    // Scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-
-    // Reset animation after it's done
-    setTimeout(() => {
-      setRocketAnimation(false);
-    }, 2000); // Adjust this time to match your animation duration
-  };
+    const handleClosePopup = () => {
+      setShowPopup(false); // Close the pop-up
+    };
 
   return (
     <div className="fullbg">
     <div className="ptbackground">
-            {/* Navigation Bar */}
+            
+    <div>
+      {/* Pop-up message */}
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Explore my projects and achievements!</p>
+            <button onClick={handleClosePopup}>Thank You</button>
+          </div>
+        </div>
+      )}
+      </div>
+            
             {/* Navigation Bar */}
 <Navbar variant="dark"  expand="lg" style={{ position: 'absolute', top: '1em', right: '7.5em' }}>
   <Navbar.Toggle aria-controls="navbar-nav" />
@@ -562,6 +591,7 @@ function Port() {
 
     </div>
     </div>
+    
     </div>
   );
 }

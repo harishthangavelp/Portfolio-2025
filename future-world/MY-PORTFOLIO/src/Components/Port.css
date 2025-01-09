@@ -280,6 +280,70 @@
     text-align: right;  /* Right-align icons */
   }
   
-  @media (max-width: 768px) {
-  }
+ /* Pop-up overlay to dim the background */
+/* Pop-up overlay to dim the background */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Pop-up box */
+.popup {
+  background: linear-gradient(135deg, #007bff, #ffdd59); /* Bluish-yellowish gradient */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 20px;
+  max-width: 400px;
+  width: 90%;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+}
+
+/* Heading */
+.popup h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.popup p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Thank You button */
+.popup button {
+  background: #ffdd59;
+  color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.popup button:hover {
+  background: #ffcc33;
+  transform: scale(1.05);
+}
+
+.popup button:active {
+  transform: scale(0.95);
+}
+
+
+
+
+
+
   
